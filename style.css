@@ -1,0 +1,1178 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap');
+:root {
+    --font-syne: "Syne", sans-serif;
+    --font-dm-sens: "DM Sans", sans-serif;
+    --primaryColor: #F5A623;
+    --whiteColor: #fff;
+    --blackColor: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-dm-sens);
+    font-size: 16px;
+    font-weight: 400;
+    background: var(--whiteColor);
+    color: #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 700;
+}
+
+p,
+figure,
+label {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+small {
+    font-size: inherit;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+input,
+button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    outline: none;
+    transition: 0.2s all ease;
+    -webkit-transition: 0.2s all ease;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+}
+
+select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(images/select-input-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: calc(100% - 15px) 50%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+::selection {
+    color: var(--whiteColor);
+    background: var(--primaryColor);
+}
+
+::-webkit-selection {
+    color: var(--whiteColor);
+    background: var(--primaryColor);
+}
+
+::-moz-selection {
+    color: var(--whiteColor);
+    background: var(--primaryColor);
+}
+
+.text-primary {
+    color: var(--primaryColor) !important;
+}
+
+.font-medium {
+    font-weight: 500 !important;
+}
+
+.font-semibold {
+    font-weight: 600 !important;
+}
+
+.bg-included {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.absolute-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flex-col-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gap-x-26 {
+    row-gap: 26px;
+}
+
+.scrolltotop {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: var(--primaryColor);
+    text-align: center;
+    font-size: 22px;
+    color: #ffffff;
+    position: fixed;
+    right: 30px;
+    bottom: 25px;
+    display: none;
+    animation: lab_top_up 5s linear infinite;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.scrolltotop i {
+    color: var(--whiteColor);
+}
+
+@keyframes lab_top_up {
+    0% {
+        transform: translateY(-15px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+.pluse,
+.pluse2 {
+    position: relative;
+    top: 10px;
+    left: -8px;
+    z-index: -1;
+}
+
+.pluse::before,
+.pluse2::before {
+    width: 40px;
+    height: 40px;
+}
+
+.pluse::after,
+.pluse::before,
+.pluse2::after,
+.pluse2::before {
+    background: var(--primaryColor);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+
+.pluse::after,
+.pluse2::after {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+.pluse::before {
+    -webkit-animation: pluse_animate 2.5s infinite linear;
+    animation: pluse_animate 2.5s infinite linear;
+}
+
+.pluse2::before {
+    -webkit-animation: pluse_animate 3s infinite linear;
+    animation: pluse_animate 3s infinite linear;
+}
+
+@keyframes pluse_animate {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) scale(0.3);
+        transform: translate(-50%, -50%) scale(0.3);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(2);
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+
+/*======= header-area design =======*/
+
+.hero-area {
+    background: linear-gradient(126.57deg, #071530 0%, #132B5E 55%, #1E3A7A 100%);
+    padding-top: 56px;
+    padding-bottom: 67px;
+    color: var(--whiteColor);
+}
+
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+}
+
+.hero-wrapper .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 160px;
+}
+
+.hero-toper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border: 1px solid #F5A62359;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    letter-spacing: 0.96px;
+    background: #F5A62326;
+}
+
+.hero-toper span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primaryColor);
+}
+
+.hero-wrapper h2 {
+    font-family: var(--font-syne);
+    font-size: 50px;
+    line-height: 57.5px;
+    font-weight: 700;
+    max-width: 557px;
+    text-align: center;
+}
+
+.hero-wrapper h2 span {
+    color: var(--primaryColor);
+}
+
+.hero-wrapper p {
+    font-size: 18px;
+    text-align: center;
+    max-width: 463px;
+    color: #FFFFFFC7;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+.review-btn {
+    padding: 15px 16px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--font-syne);
+    color: #071530;
+    background: var(--primaryColor);
+    border-radius: 100px;
+    box-shadow: 0px 4px 20px 0px #F5A62359;
+    display: flex;
+    align-items: center;
+}
+
+.whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #25D366;
+    padding: 17px 32px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--font-syne);
+}
+
+.whatsapp-btn i {
+    font-size: 25px;
+}
+
+.hero-actions a:hover {
+    opacity: 0.9;
+}
+
+.hero-features ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-features ul li {
+    font-size: 13px;
+    color: #FFFFFF73;
+}
+
+.hero-features ul li span {
+    font-size: 14px;
+    color: var(--primaryColor);
+}
+
+/*========== hero area end harea ======== */
+
+/*======= why area style start hare ===== */
+
+.why-area {
+    padding-block: 60px;
+    background: #F7F9FC;
+}
+
+.why-top {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+}
+
+.why-top p {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 12px;
+    line-height: 19.2px;
+    letter-spacing: 1.2px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #1A47A8;
+}
+
+.why-top h2 {
+    font-family: var(--font-syne);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 41.4px;
+    text-align: center;
+    color: #0B1F45;
+    max-width: 471px;
+}
+
+.why-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.why-us-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.single-why-item {
+    box-shadow: 0px 4px 24px 0px #0B1F451A;
+    padding: 25px;
+    border: 1px solid #E2E8F0;
+    background: var(--whiteColor);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.single-why-item .icon {
+    background: linear-gradient(135deg, #0B1F45 0%, #1A47A8 100%);
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    font-size: 24px;
+    color: var(--whiteColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-why-item h4 {
+    font-family: var(--font-syne);
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 19.55px;
+    color: #0B1F45;
+    max-width: 136px;
+}
+
+.why-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.why-item-content p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #64748B;
+}
+
+/*========== why area style end hare ======= */
+
+/*======= write review area style start hare ====== */
+
+.write-review-area {
+    color: var(--whiteColor);
+    background: linear-gradient(146.91deg, #0B1F45 0%, #132B5E 100%);
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+.write-review-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.write-review-top p {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 19.2px;
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #F5A623;
+}
+
+.write-review-top h2 {
+    font-family: var(--font-syne);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 41.4px;
+    letter-spacing: 0%;
+    text-align: center;
+    max-width: 440px;
+}
+
+.write-review-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.write-rv-form {
+    padding: 30px 24px;
+    background: var(--whiteColor);
+    box-shadow: 0px 20px 60px 0px #0000004D;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 480px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: #64748B;
+    position: relative;
+}
+
+.rv-top-wp {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rv-top-wp h4 {
+    font-family: var(--font-syne);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0%;
+    color: #0B1F45;
+}
+
+.rv-top-wp p {
+    font-size: 14px;
+    line-height: 22.4px;
+    letter-spacing: 0%;
+}
+
+.write-rv-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 4px;
+}
+
+.single-input {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.single-input label {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20.8px;
+    color: #0B1F45;
+}
+
+.single-input input {
+    padding: 15px 18px;
+    border: 2px solid #E2E8F0;
+    background: #F7F9FC;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1;
+    color: #0B1F45;
+}
+
+.single-input label span {
+    color: #64748B;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.single-checbox input {
+    width: 20px;
+    height: 20px;
+    /* accent-color: var(--primaryColor); */
+}
+
+.single-checbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-bottom button {
+    padding: 16px 20px;
+    background: #0B1F45;
+    color: var(--whiteColor);
+    width: 100%;
+    border-radius: 100px;
+    box-shadow: 0px 4px 16px 0px #0B1F4559;
+    font-family: var(--font-syne);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.form-bottom {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+}
+
+.form-bottom p {
+    font-size: 12px;
+    line-height: 19.2px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.limited-sport {
+    position: absolute;
+    right: 24px;
+    top: -15px;
+    padding: 7px 12px;
+    background: var(--primaryColor);
+    border-radius: 100px;
+    font-family: var(--font-syne);
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 17.6px;
+    letter-spacing: 0%;
+    color: #071530;
+}
+
+/*======= write review style end hare ====== */
+
+/*======= whatsapp area style start hare ===== */
+
+.whatsapp-area {
+    padding-block: 53px;
+    background: #ECFDF5;
+    border-width: 2px, 0px, 2px, 0px;
+    border-style: solid;
+    border-color: #BBF7D0;
+}
+
+.whatsapp-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.whatsApp-icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 8px 24px 0px #25D36659;
+    background: #25D366;
+    color: var(--whiteColor);
+    font-size: 38px;
+}
+
+.wp-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.wp-content-top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.wp-content-top h2 {
+    font-family: var(--font-syne);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34.5px;
+    text-align: center;
+    color: #064E3B;
+    max-width: 672px;
+}
+
+.wp-content-top p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    max-width: 360px;
+    color: #065F46;
+}
+
+.wp-cnt-btn {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    color: #065F46;
+}
+
+.whatsapp-btn:hover {
+    opacity: 0.9;
+}
+
+/*========== whatsapp area style end hare ========== */
+
+/*=========== result area style start hare ======== */
+
+.result-area {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    background: #fff;
+}
+
+.result-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.result-wp-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+}
+
+.result-wp-top p {
+    color: #1A47A8;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.result-wp-top h2 {
+    color: #0B1F45;
+    text-align: center;
+    font-family: var(--font-syne);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+    max-width: 423px;
+}
+
+.review-list {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+
+.single-review {
+    display: flex;
+    flex-direction: column;
+    padding-top: 26px;
+    padding-bottom: 16px;
+    padding-inline: 29px;
+    border-radius: 14px;
+    border: 1px solid #E2E8F0;
+    background: #F7F9FC;
+    box-shadow: 0 4px 24px 0 rgba(11, 31, 69, 0.10);
+    width: calc((100% - 40px) / 3);
+    position: relative;
+}
+
+.rating-start {
+    color: #F5A623;
+    font-family: "Segoe UI Symbol";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+}
+
+.single-review p {
+    color: #2D3748;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 160%;
+    max-width: 225px;
+}
+
+.reviewer-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.reviewer-user .user-logo {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    padding: 11.21px 4.778px 11.79px 5.17px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 21px;
+    background: linear-gradient(135deg, #0B1F45 0%, #1A47A8 100%);
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-syne);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+}
+
+.reviewr-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.reviewr-info h4 {
+    color: #0B1F45;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+}
+
+.reviewr-info span {
+    color: #25D366;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+}
+
+.quite-icon {
+    position: absolute;
+    color: #F5A623;
+    font-family: var(--font-syne);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    top: 16px;
+    right: 24px;
+    opacity: 0.25;
+}
+
+.review-btm-text {
+    color: #252525;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.857%;
+    margin-top: 18px;
+}
+
+/*========== review area style end hare ========== */
+
+/*============ getting area style start hare ====== */
+
+.getting-area {
+    padding-top: 70px;
+    padding-bottom: 84px;
+    background: linear-gradient(116deg, #071530 0%, #132B5E 100%);
+    color: var(--whiteColor);
+}
+
+.getting-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.getting-wrapper h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-syne);
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+    max-width: 447px;
+}
+
+.getting-wrapper h2 span {
+    color: var(--primaryColor);
+}
+
+.getting-wrapper p {
+    color: rgba(255, 255, 255, 0.65);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    max-width: 398px;
+    margin-top: 17.58px;
+}
+
+.getting-wrapper .hero-actions {
+    margin-top: 30px;
+}
+
+/*=============footer style start hare =============== */
+
+.footer-area {
+    padding-block: 26px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    background: #071530;
+}
+
+.footer-wrapper p {
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.footer-wrapper p a {
+    color: var(--primaryColor);
+}
+
+.fixed-wp-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 150px;
+}
+
+.fixed-wp-btn .whatsApp-icon {
+    width: 58px;
+    height: 58px;
+}
+
+/*========= Footer style end hare ========== */
+
+/*=================================
+ THANK YOU PAGE STYLE 
+================================== */
+
+.main-area {
+    min-height: 100dvh;
+    background: url(images/thankyou-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--whiteColor);
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.site-name a {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-syne);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -0.4px;
+}
+
+.site-name a span {
+    color: var(--primaryColor);
+}
+
+.thank-you-check {
+    width: 96px;
+    height: 96px;
+    border-radius: 48px;
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0 0 0 16px rgba(245, 166, 35, 0.08), 0 12px 40px 0 rgba(245, 166, 35, 0.40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+    margin-bottom: 34px;
+    background: linear-gradient(135deg, #F5A623 0%, #E09318 100%);
+}
+
+.thank-you-title {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-syne);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 112%;
+}
+
+.thank-you-title span {
+    color: var(--primaryColor);
+}
+
+.thank-text p {
+    color: rgba(255, 255, 255, 0.65);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    margin-top: 17px;
+    max-width: 409px;
+}
+
+.review-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    width: 100%;
+    max-width: 660px;
+    padding-top: 42px;
+}
+
+.signle-review-step {
+    display: flex;
+    flex-direction: column;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(3px);
+    padding: 17px 20px;
+    align-items: center;
+}
+
+.step-serial {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    padding: 9.5px 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    border: 1px solid rgba(245, 166, 35, 0.40);
+    background: rgba(245, 166, 35, 0.15);
+    color: #F5A623;
+    text-align: center;
+    font-family: var(--font-syne);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.signle-review-step h4 {
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 16px;
+}
+
+.signle-review-step p {
+    color: rgba(255, 255, 255, 0.50);
+    text-align: center;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 5px;
+}
+
+.reach-us-wp {
+    padding-top: 44px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reach-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+    gap: 12px;
+}
+
+.reach-title span {
+    display: block;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    flex: 1;
+}
+
+.reach-title p {
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+}
+
+.reach-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.reach-container .whatsapp-btn {
+    border-radius: 100px;
+    background: #25D366;
+    box-shadow: 0 6px 24px 0 rgba(37, 211, 102, 0.35);
+}
+
+.reach-container p {
+    color: rgba(255, 255, 255, 0.45);
+    text-align: center;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.reach-btm-text {
+    color: rgba(255, 255, 255, 0.30);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-text {
+    margin-top: 56px;
+    margin-bottom: 84px;
+    color: rgba(255, 255, 255, 0.20);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-text a {
+    color: var(--primaryColor);
+}
+
+.fixed-wp-btn.thank-you {
+    bottom: 30px;
+}

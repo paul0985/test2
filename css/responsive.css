@@ -1,0 +1,171 @@
+@media screen and (min-width: 1400px) {
+    .container {
+        max-width: 1344px;
+    }
+}
+
+/*
+====================================
+large Screen - Others
+====================================
+*/
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+
+
+
+}
+
+/*
+====================================
+Medium Screen - Others
+====================================
+*/
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .gap-x-40 {
+        row-gap: 50px;
+    }
+
+
+}
+
+/*
+====================================
+Small Screen - Tablate
+====================================
+*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .gap-x-40 {
+        row-gap: 45px;
+    }
+
+
+    .why-us-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
+
+/*
+====================================
+Xtra Small Screen - Small Mobile
+====================================
+*/
+@media screen and (max-width: 767px) {
+    .container {
+        padding-inline: 20px;
+    }
+
+    /* hero  */
+
+.hero-area {
+	background: linear-gradient(159.86deg, #071530 0%, #132B5E 55%, #1E3A7A 100%);
+}
+.hero-wrapper .logo {
+	display: none;
+}
+.hero-wrapper h2 {
+	font-size: 28px;
+	line-height: 32.5px;
+	max-width: 306px;
+}
+.hero-wrapper p {
+	font-size: 15px;
+}
+.hero-actions {
+	flex-direction: column;
+	padding-top: 0;
+}
+
+.why-us-list {
+        grid-template-columns: 1fr;
+    }
+
+.why-top h2 {
+	font-size: 24px;
+	line-height: 27.4px;
+}
+.single-why-item {
+	flex-direction: row;
+}
+.why-item-content {
+	flex: 1;
+}
+.single-why-item h4 {
+	max-width: 190px;
+}
+.form-bottom button {
+	padding: 16px 16px;
+	font-size: 14px;
+}
+.write-review-top h2 {
+	font-size: 24px;
+	line-height: 27.4px;
+	max-width: 293px;
+}
+.write-review-area {
+	padding-block: 60px;
+}
+
+
+.whatsapp-area {
+	padding-top: 36px;
+	padding-bottom: 78px;
+}
+.wp-content-top h2 {
+	font-size: 22px;
+	line-height: 25.5px;
+	max-width: 329px;
+}
+
+
+.review-list {
+	flex-direction: column;
+}
+.single-review {
+	width: 100%;
+}
+.single-review p {
+	max-width: 100%;
+}
+.result-wp-top h2 {
+	font-size: 24px;
+}
+
+
+.getting-wrapper h2 {
+	font-size: 26px;
+}
+
+
+/* thank you page  */
+
+.thank-you-title {
+	font-size: 28px;
+}
+.review-steps {
+	grid-template-columns: 1fr;
+}
+.signle-review-step {
+	flex-direction: row;
+	gap: 16px;
+}
+
+.step-content {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+.thank-text p {
+	font-size: 15px;
+}
+
+}
+
+
+
+@media screen and (max-width: 575px) {
+
+
+}

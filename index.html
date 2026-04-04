@@ -119,35 +119,40 @@
                             <h4>Tell Us About Your Business</h4>
                             <p>We'll put together a free plan tailored to your roofing business — no pushy sales, no spam.</p>
                         </div>
-                        <form action="">
+                        <form action="https://formsubmit.co/ps5294773@gmail.com" method="POST">
+                            <input type="hidden" name="_subject" value="New Roofing Website Review Request">
+                            <input type="hidden" name="_next" value="thank-you.html">
+                            <input type="hidden" name="_captcha" value="true">
+                            <input type="text" name="_honey" style="display:none">
+
                             <div class="single-input">
                                 <label for="f-name">Your Name</label>
-                                <input type="text" placeholder="e.g. James Wilson" id="f-name">
+                                <input type="text" placeholder="e.g. James Wilson" id="f-name" name="name" required>
                             </div>
                             <div class="single-input">
                                 <label for="b-name">Business Name</label>
-                                <input type="text" placeholder="e.g. Google Inc." id="b-name">
+                                <input type="text" placeholder="e.g. Google Inc." id="b-name" name="business_name" required>
                             </div>
                             <div class="single-input">
                                 <label for="number">Phone Number</label>
-                                <input type="tel" placeholder="e.g. 07700 900000" id="number">
+                                <input type="tel" placeholder="e.g. 07700 900000" id="number" name="phone" required>
                             </div>
                             <div class="single-input">
                                 <label>Do you already have a website? <span>(Optional)</span>
                                 </label>
                                 <div class="checkbox-container">
                                     <div class="single-checbox">
-                                        <input type="radio" name="checbox" id="yes">
+                                        <input type="radio" name="has_website" id="yes" value="Yes">
                                         <label for="yes">Yes</label>
                                     </div>
                                     <div class="single-checbox">
-                                        <input type="radio" name="checbox" id="no">
+                                        <input type="radio" name="has_website" id="no" value="No">
                                         <label for="no">No</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-bottom">
-                                <button>Get My Free Website Review →</button>
+                                <button type="submit">Get My Free Website Review →</button>
                                 <p>🔒 No obligation. Just a free website review.</p>
                             </div>
                         </form>

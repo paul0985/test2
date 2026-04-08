@@ -966,7 +966,7 @@ input::-webkit-inner-spin-button {
 
 .main-area {
     min-height: 100dvh;
-    background: url(images/thankyou-bg.png) no-repeat;
+    background: url(images/thankyou-bg.webp) no-repeat;
     background-size: cover;
     background-position: center;
     color: var(--whiteColor);
